@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": 130,
+   "execution_count": 132,
    "id": "ed13e2aa-827d-4883-8f52-7e354df1d23d",
    "metadata": {
     "tags": []
@@ -23,7 +23,7 @@
        "        "
       ],
       "text/plain": [
-       "<IPython.lib.display.IFrame at 0x1680a7a50>"
+       "<IPython.lib.display.IFrame at 0x1681a6d90>"
       ]
      },
      "metadata": {},
@@ -120,7 +120,7 @@
     "def success_payload_scatter_chart(entered_site,payload):\n",
     "    filtered_df = spacex_df\n",
     "    if entered_site == 'ALL':\n",
-    "        fig = px.scatter(filtered_df.groupby(['Launch Site']).count(), x=\"Payload Mass (kg)\",y=\"class\", color=\"Booster Version Category\", \n",
+    "        fig = px.scatter(filtered_df, x=\"Payload Mass (kg)\",y=\"class\", color=\"Booster Version Category\", \n",
     "        title='Correlation between Payload and Success for all Sites')\n",
     "        return fig\n",
     "    else:\n",
@@ -134,14 +134,6 @@
     "if __name__ == '__main__':\n",
     "    app.run_server()\n"
    ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "a2f8564c-85b9-4d7a-b6ed-299760686eeb",
-   "metadata": {},
-   "outputs": [],
-   "source": []
   }
  ],
  "metadata": {
